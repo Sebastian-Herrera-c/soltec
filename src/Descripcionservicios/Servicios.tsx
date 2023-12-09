@@ -1,5 +1,4 @@
 import React from 'react';
-import componente from '../componentes/Componentes.css'
 const Servicios: React.FC = () => {
   return (
     <div className="container">

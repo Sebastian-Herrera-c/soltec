@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import solteclogo from '/Users/sebastianherrera/soltec/src/assets/Imagenes/Soltec-logo.png';
+import solteclogo from '../assets/Imagenes/Soltec-logo.png';
 
 const Scroll: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);

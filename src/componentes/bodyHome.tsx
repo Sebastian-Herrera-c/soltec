@@ -2,14 +2,12 @@ import Servicios from '../Descripcionservicios/Servicios'
 import CarruselSwiper from '../carrusel/Carrusel'
 import Footer from '../footer/footer'
 import ContactForm from '../formulariodecontacto/Formulariocontacto'
-import Horno1 from '/Users/sebastianherrera/soltec/src/assets/Imagenes/Horno1.png'
-import Horno2 from '/Users/sebastianherrera/soltec/src/assets/Imagenes/Horno2.png'
-import Maquina3 from '/Users/sebastianherrera/soltec/src/assets/Imagenes/Maquina3.png'
-import logo1 from '/Users/sebastianherrera/soltec/src/assets/Imagenes/logoromco.png'
-import logo2 from '/Users/sebastianherrera/soltec/src/assets/Imagenes/logoservibaker.png'
-import fullsize1 from '/Users/sebastianherrera/soltec/src/assets/Imagenes/portfolio/fullsize/fullsize1.jpg'
-import fullsize2 from '/Users/sebastianherrera/soltec/src/assets/Imagenes/portfolio/fullsize/fullsize2.jpg'
-
+import Horno1 from '../assets/Imagenes/Horno1.png'
+import Horno2 from '../assets/Imagenes/Horno2.png'
+import Maquina3 from '../assets/Imagenes/Maquina3.png'
+import logo1 from '../assets/Imagenes/logoromco.png'
+import logo2 from '../assets/Imagenes/logoservibaker.png'
+import CarruselMarcas from '../carrusel/CarruselMarcas'
 
 
 
@@ -19,9 +17,18 @@ function Body() {
         <><div>
           <br />
           <br />
-          br
-            <CarruselSwiper/>
           
+            <CarruselSwiper/>
+            <br />
+            <br />
+            <br />
+            <CarruselMarcas/>
+        
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
                 <div className="container px-4 px-lg-5">
                     <h2 className="text-center mt-0">Marcas que trabajamos</h2>
                     {/* <hr className="divider" /> */}
