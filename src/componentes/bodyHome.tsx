@@ -22,9 +22,10 @@ function Body() {
             </div>
 
             <br />
-
-
-
+            < Servicios />
+            <br />
+            <ContactForm />
+            <br />
             <Footer />
         </div>
     )
