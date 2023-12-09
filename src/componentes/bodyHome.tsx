@@ -25,11 +25,6 @@ function Body() {
 
 
 
-            <Servicios />
-
-            <div id='contact'>
-                <ContactForm />
-            </div>
             <Footer />
         </div>
     )
