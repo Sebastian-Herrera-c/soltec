@@ -14,21 +14,23 @@ function Body() {
         <div>
             <br />
             <br />
-
-            <CarruselSwiper />
-
-            <CarruselMarcas />
+            <div id='repuestos'>
+                <CarruselSwiper />
+            </div>
+            <div id='nuestrasmarcas'>
+                <CarruselMarcas />
+            </div>
 
             <br />
-               
-          
-          
-           <Servicios/>
-          
 
-                        <ContactForm/>
-                     
-                        <Footer />
+
+
+            <Servicios />
+
+            <div id='contact'>
+                <ContactForm />
+            </div>
+            <Footer />
         </div>
     )
 }
