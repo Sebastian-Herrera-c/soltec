@@ -20,8 +20,15 @@ const ContactForm: React.FC = () => {
     console.log('Formulario enviado:', formState);
   };
 
+
   return (
     <div className='container col-6'>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="container px-4 px-lg-5">
         <div className="row gx-4 gx-lg-5 justify-content-center">
           <div className="col-lg-8 col-xl-6 text-center">
@@ -100,6 +107,7 @@ const ContactForm: React.FC = () => {
                 value={formState.message}
                 onChange={handleInputChange}
                 data-sb-validations="required"
+                rows={60} 
               ></textarea>
               <label htmlFor="message">Mensaje</label>
               <div className="invalid-feedback" data-sb-feedback="message:required">
@@ -109,7 +117,7 @@ const ContactForm: React.FC = () => {
 
             <div className="d-grid">
               <button className="btn btn-primary btn-xl" id="submitButton" type="submit">
-                Submit
+                Enviar correo
               </button>
             </div>
           </form>
