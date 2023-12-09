@@ -1,4 +1,4 @@
-import logosoltec from '/Users/sebastianherrera/soltec/src/assets/Imagenes/Soltec-logo.png'
+import logosoltec from '../assets/Imagenes/Soltec-logo.png'
 
 function Footer() {
   return (
