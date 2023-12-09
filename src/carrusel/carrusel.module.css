@@ -1,0 +1,26 @@
+.card {
+    width: 300px; /* Tamaño fijo para las tarjetas */
+    height: 400px; /* Tamaño fijo para las tarjetas */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 60%; /* Altura relativa de la imagen */
+    object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+    object-position: center; /* Posiciona la imagen en el centro */
+}
+
+.card-body {
+    height: 40%; /* Altura relativa del cuerpo */
+}
+
+.card-title,
+.card-text,
+.preciocard {
+    width: 100%;
+}
+
+.botoncomprar {
+    justify-content: end;
+    background-color: #dc5834;
+}
