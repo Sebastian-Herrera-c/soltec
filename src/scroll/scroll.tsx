@@ -27,10 +27,9 @@ const Scroll: React.FC = () => {
           aria-label="Toggle navigation"><span className="navbar-toggler-icon"></span></button>
         <div className={`collapse navbar-collapse ${scrolled ? 'show' : ''}`} id="navbarResponsive">
           <ul className={`navbar-nav ms-auto my-2 my-lg-0 ${scrolled ? '' : 'scrolled'}`} style={{ color: scrolled ? '#000000' : '#ffffff' }}>
-            <li className="nav-item"><a className="nav-link" href="#contact" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Equipos</a></li>
-            <li className="nav-item"><a className="nav-link" href="#services" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Nuestros socios</a></li>
+            <li className="nav-item"><a className="nav-link" href="#services" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Repuestos</a></li>
+            <li className="nav-item"><a className="nav-link" href="#services2" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Nuestros socios</a></li>
             <li className="nav-item"><a className="nav-link" href="#portfolio" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Servicios</a></li>
-            <li className="nav-item"><a className="nav-link" href="#contact" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Repuestos</a></li>
             <li className="nav-item"><a className="nav-link" href="#contact" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Contactanos</a></li>
             <div>
               {/* Utilizando clases de tamaño de Bootstrap junto con íconos */}

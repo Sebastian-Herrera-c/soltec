@@ -19,9 +19,10 @@ function Body() {
         <><div>
           <br />
           <br />
-          br
+          <div id='services'>
             <CarruselSwiper/>
-          
+            </div>
+            <div id='services2'/>
                 <div className="container px-4 px-lg-5">
                     <h2 className="text-center mt-0">Marcas que trabajamos</h2>
                     {/* <hr className="divider" /> */}
@@ -58,60 +59,13 @@ function Body() {
                         </div>
                     </div>
                 </div>
-            <div id="portfolio">
-                <div className="container-fluid p-0">
-                    <div className="row g-0">
-                    
-                      
-                      
-                      
-                     
-                     
-                    </div>
-                </div>
-            </div><section className="page-section bg-dark text-white" />
+          
+            <div className='serviciossss'>
            <Servicios/>
-
+           </div>
 
             {/* </section><br /><h3 className="Repuestolestras">Repuestos</h3><hr> className="divider"/</hr> */}
-            <section className="page-section" id="carouselSection">
-                <div className="container">
-                    <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
-                        <div className="carousel-inner">
-                            <div className="carousel-item active">
-                                <img src={Horno1} width="200px" />
-                            </div>
-                            <div className="carousel-item">
-                                <img src={Horno2} width="200px" />
-                            </div>
-                            <div className="carousel-item">
-                                <img src={Maquina3} width="200px" />
-                            </div>
-                            <div className="carousel-item">
-                                <img src="./assets/img/Captura de pantalla 2023-11-13 a la(s) 23.49.36.png" width="200px" />
-                            </div>
-                            <div className="carousel-item">
-                                <img src="./assets/img/Captura de pantalla 2023-11-20 a la(s) 15.49.03.png" width="200px" />
-                            </div>
-                            <div className="carousel-item">
-                                <img src="./assets/img/Captura de pantalla 2023-11-20 a la(s) 15.49.22.png" width="200px" />
-                            </div>
-                            <div className="carousel-item">
-                                <img src="./assets/img/Captura de pantalla 2023-11-13 a la(s) 23.33.41.png" width="200px" />
-                            </div>
-                            {/* <-- Agrega más imágenes o contenido de carrusel aquí --> */}
-                        </div>
-                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Anterior</span>
-                        </button>
-                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span className="visually-hidden">Siguiente</span>
-                        </button>
-                    </div>
-                </div>
-            </section>
+           
             {/* <!-- Contact--> */}
             <section className="page-section" id="contact">
                 <div className="container px-4 px-lg-5">
