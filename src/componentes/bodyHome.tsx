@@ -20,15 +20,17 @@ function Body() {
             <CarruselMarcas />
 
             <br />
-               
-          
-          
-           <Servicios/>
-          
 
-                        <ContactForm/>
-                     
-                        <Footer />
+
+
+
+
+            <Servicios />
+            
+            <br />
+            <ContactForm />
+
+            <Footer />
         </div>
     )
 }
