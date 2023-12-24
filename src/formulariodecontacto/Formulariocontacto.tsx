@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import "./formulario.css"
+
 
 const ContactForm: React.FC = () => {
   const [formState, setFormState] = useState({
@@ -9,16 +13,35 @@ const ContactForm: React.FC = () => {
     message: ''
   });
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = event.target;
-    setFormState({ ...formState, [name]: value });
+
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_g6mco6v', 'template_nxzsnur', form.current, 'JZnQU1KNyvup4qory')
+    .then((result) => {
+      console.log(result.text);
+      toast.success("Mensaje enviado con éxito!");
+      if (form.current) {
+        form.current.reset(); // Aquí se restablece el formulario
+      }
+    }, (error: { text: any; }) => {
+      console.log(error.text);
+      toast.error("Ocurrió un error al enviar el mensaje.");
+    });
   };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // Lógica para enviar datos a tu servidor o realizar otras acciones después de enviar el formulario.
-    console.log('Formulario enviado:', formState);
-  };
+
+  // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   const { name, value } = event.target;
+  //   setFormState({ ...formState, [name]: value });
+  // };
+
+  // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+
+  // };
 
 
   return (
@@ -43,20 +66,19 @@ const ContactForm: React.FC = () => {
 
           </div>
 
-          <form id="contact" onSubmit={handleSubmit}>
+          <form id="contact" ref={form} onSubmit={sendEmail}>
             <div className="form-floating mb-3">
               <input
                 className="form-control"
-                id="name"
-                name="name"
+                id="user_name"
+                name="user_name"
                 type="text"
                 placeholder="Enter your name..."
-                value={formState.name}
-                onChange={handleInputChange}
+             
                 data-sb-validations="required"
               />
-              <label htmlFor="name">Nombre Completo</label>
-              <div className="invalid-feedback" data-sb-feedback="name:required">
+              <label htmlFor="user_name">Nombre Completo</label>
+              <div className="invalid-feedback" data-sb-feedback="user_name:required">
                 A name is required.
               </div>
             </div>
@@ -65,11 +87,9 @@ const ContactForm: React.FC = () => {
               <input
                 className="form-control"
                 id="email"
-                name="email"
+                name="user_email"
                 type="email"
                 placeholder="name@example.com"
-                value={formState.email}
-                onChange={handleInputChange}
                 data-sb-validations="required,email"
               />
               <label htmlFor="email">Direccion de Correo Electronico</label>
@@ -88,15 +108,13 @@ const ContactForm: React.FC = () => {
                 name="phone"
                 type="tel"
                 placeholder="(123) 456-7890"
-                value={formState.phone}
-                onChange={handleInputChange}
                 data-sb-validations="required"
               />
               <label htmlFor="phone">Numero de Teléfono</label>
               <div className="invalid-feedback" data-sb-feedback="phone:required">
                 A phone number is required.
               </div>
-            </div>
+            </div> 
 
             <div className="form-floating mb-3">
               <textarea
@@ -104,8 +122,6 @@ const ContactForm: React.FC = () => {
                 id="message"
                 name="message"
                 placeholder="Enter your message..."
-                value={formState.message}
-                onChange={handleInputChange}
                 data-sb-validations="required"
                 rows={60} 
               ></textarea>
@@ -121,6 +137,7 @@ const ContactForm: React.FC = () => {
               </button>
             </div>
           </form>
+          <ToastContainer />
         </div>
       </div>
     </div>
