@@ -18,6 +18,10 @@ const Scroll: React.FC = () => {
     };
   }, []);
 
+  const defaultWhatsAppMessage = encodeURIComponent("Hola, te has comunicado con un ejecutivo de Soltec. ¿En qué podemos ayudarte?");
+
+  const whatsappBusinessLink = `https://wa.me/+56953555444?text=${defaultWhatsAppMessage}`; // Reemplaza con tu número de teléfono de WhatsApp Business
+
   return (
     <nav className={`navbar navbar-expand-lg navbar-light fixed-top py-3 ${scrolled ? 'scrolled' : ''}`} style={{ backgroundColor: scrolled ? '#FFFFFF' : 'transparent' }}>
       <div className="container px-4 px-lg-5">
@@ -31,11 +35,17 @@ const Scroll: React.FC = () => {
             <li className="nav-item" style={{ marginRight: '20px' }}><a className="nav-link" href="#repuestos" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Repuestos</a></li>
             <li className="nav-item" style={{ marginRight: '20px' }}><a className="nav-link" href="#nuestrasmarcas" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Nuestras Marcas</a></li>
             <li className="nav-item" style={{ marginRight: '20px' }}><a className="nav-link" href="#portfolio" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Servicios</a></li>
-            <li className="nav-item" style={{ marginRight: '20px' }}><a className="nav-link" href="#contact" style={{ color: scrolled ? '#000000' : '#ffffff' }}>Contactanos</a></li>
+            <li className="nav-item" style={{ marginRight: '20px' }}>
+              <a className="nav-link" href={whatsappBusinessLink} style={{ color: scrolled ? '#000000' : '#ffffff' }}>
+                
+              </a>
+            </li>
             <div className="d-flex justify-content-end">
-              <a href="https://www.whatsapp.com/" className="text-success me-3" style={{ fontSize: '24px' }}>
+              {/* Botón de WhatsApp Business */}
+              <a href={whatsappBusinessLink} className="text-success me-3" style={{ fontSize: '24px' }}>
                 <i className="bi bi-whatsapp"></i>
               </a>
+              {/* Otros botones de redes sociales */}
               <a href="https://www.facebook.com/" className="text-success me-3" style={{ fontSize: '24px' }}>
                 <i className="bi bi-facebook"></i>
               </a>

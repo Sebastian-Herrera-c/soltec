@@ -58,7 +58,7 @@ const ContactForm: React.FC = () => {
             <h2 className="mt-0">Contactanos!</h2>
             <hr className="divider" />
             <p className="text-muted mb-5">¿Listo para comenzar tu próximo proyecto con nosotros? ¡Envíanos un
-              mensaje y nos comunicaremos contigo lo antes posible!</p>
+              mensaje y nos comunicaremos contigo a la brevedad!</p>
           </div>
         </div>
         <div className="row gx-4 gx-lg-5 justify-content-center mb-5">
