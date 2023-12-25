@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -13,18 +13,22 @@ const ContactForm: React.FC = () => {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_g6mco6v', 'template_nxzsnur', form.current, 'JZnQU1KNyvup4qory')
-    .then((result) => {
-      console.log(result.text);
-      toast.success("Mensaje enviado con éxito!");
-      if (form.current) {
-        form.current.reset(); // Aquí se restablece el formulario
-      }
-    }, (error: { text: any; }) => {
-      console.log(error.text);
-      toast.error("Ocurrió un error al enviar el mensaje.");
-    });
+  
+    if (form.current) {
+      emailjs.sendForm('service_g6mco6v', 'template_nxzsnur', form.current, 'JZnQU1KNyvup4qory')
+      .then((result) => {
+        console.log(result.text);
+        toast.success("Mensaje enviado con éxito!");
+        if (form.current) {
+          form.current.reset(); // Aquí se restablece el formulario
+        }
+      }, (error: { text: any; }) => {
+        console.log(error.text);
+        toast.error("Ocurrió un error al enviar el mensaje.");
+      });
+    } else {
+      console.error("El formulario es null");
+    }
   };
 
 

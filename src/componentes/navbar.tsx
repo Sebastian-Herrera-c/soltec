@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import  { useEffect } from 'react';
 import Scroll from '../scroll/scroll';
 import './Componentes.css';
 

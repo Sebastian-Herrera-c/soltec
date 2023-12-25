@@ -1,0 +1,29 @@
+.container-fluid{
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid rgb(223, 149, 149);
+  }
+  .container-fluid2{
+    
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  .container-fluidlogo{
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .logo-empresa {
+    width: 200px;
+  }
+  
+  .imagen-mantenimiento {
+    width: 300px;
+  }
