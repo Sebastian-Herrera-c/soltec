@@ -5,10 +5,9 @@ import "./mantencion.css"
 const PaginaMantencion = () => {
     return (
 
-        <div className="container-fluid  text-left fondo " style={{ color: 'white', paddingRight: "400px" }}>
-            <br /><br /><br />
-            <div className="row justify-content-center">
-                <div className="col-12 col-md-6 text-left">
+        <div className="container-fluid text-left fondo" style={{ color: 'white' }}>
+            <div className="row  logoclase" >
+                <div className="col-12 col-md-6 text-left logoclase2">
                     <img src={logoEmpresa} alt="Logo de la empresa" className="img-fluid my-0 logo" />
                 </div>
             </div>

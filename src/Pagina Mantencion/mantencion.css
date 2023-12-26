@@ -16,13 +16,7 @@
 .texto{
     text-align: center;
 }
-.logo {
-    font-size: 100%;
-    
-    position: relative; /* Posiciona el logo en relación con el elemento más cercano que no sea estático */
-    top: -50px; /* Alinea el logo con la parte superior de la pantalla */
-    left: -100px; /* Alinea el logo con el lado izquierdo de la pantalla */
-}
+
 
 .correo{
     display: flex;
@@ -32,4 +26,24 @@
 .correo svg {
     margin-right: 30px; /* Ajusta este valor según tus necesidades */
     
+}
+.logoclase{
+   
+    justify-content: start;
+}
+
+.logoclase2 img {
+    justify-content: center;
+    padding-top: 70px;
+    align-items: flex-start;
+    margin-left: 130px;
+}
+
+/* Estilos para pantallas de hasta 600px de ancho */
+@media (max-width: 600px) {
+    .logoclase2 img {
+        width: 100%; /* Ajusta el ancho del logo al 100% del contenedor */
+        padding-top: 20px; /* Reduce el padding superior */
+        margin-left: 0; /* Elimina el margen izquierdo */
+    }
 }
