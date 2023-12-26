@@ -1,6 +1,7 @@
-import  { useEffect } from 'react';
+import { useEffect } from 'react';
 import Scroll from '../scroll/scroll';
 import './Componentes.css';
+
 
 function Navbar() {
   useEffect(() => {
@@ -13,6 +14,10 @@ function Navbar() {
 
     addFontAwesome();
   }, []);
+  // Mensaje de WhatsApp para enviar al número +56953555444, aqui se cambia mensaje y numero.
+  const mensaje = encodeURIComponent("Hola, necesito ayuda"); 
+      const url = `https://wa.me/+56953555444?text=${mensaje}`;
+
 
   return (
     <>
@@ -33,8 +38,9 @@ function Navbar() {
           </div>
         </div>
       </header>
+      
       {/* Botón flotante de WhatsApp con icono de Font Awesome */}
-      <a href="https://wa.me/+56953555444" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
+      <a href={url} className="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i className="fab fa-whatsapp"></i>
       </a>
     </>

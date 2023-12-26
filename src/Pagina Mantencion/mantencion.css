@@ -1,29 +1,35 @@
-.container-fluid{
+
+.fondo {
+    background-image: url("../assets//Imagenes//microram_slider_4.jpg");
+    background-size: 100% 100%; /* Cambia esto */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw; /* Ancho al 100% de la ventana del navegador */
+    height: 100vh; /* Altura al 100% de la ventana del navegador */
+    padding-left: 100px;
+    top: 0; /* Alinea el fondo con la parte superior de la pantalla */
+    left: 0; /* Alinea el fondo con el lado izquierdo de la pantalla */
+    text-align: left;
+    
+}
+
+.texto{
     text-align: center;
-    padding: 20px;
+}
+.logo {
+    font-size: 100%;
+    
+    position: relative; /* Posiciona el logo en relación con el elemento más cercano que no sea estático */
+    top: -50px; /* Alinea el logo con la parte superior de la pantalla */
+    left: -100px; /* Alinea el logo con el lado izquierdo de la pantalla */
+}
+
+.correo{
     display: flex;
     flex-direction: row;
-    border: 2px solid rgb(223, 149, 149);
-  }
-  .container-fluid2{
-    
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-  
-  }
-  .container-fluidlogo{
     justify-content: center;
-    text-align: center;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  .logo-empresa {
-    width: 200px;
-  }
-  
-  .imagen-mantenimiento {
-    width: 300px;
-  }
+}
+.correo svg {
+    margin-right: 30px; /* Ajusta este valor según tus necesidades */
+    
+}

@@ -1,4 +1,3 @@
-
 import Navbar from './componentes/navbar'
 import Body from './componentes/bodyHome'
 
